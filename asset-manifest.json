@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/New-Dodir/static/css/main.1f550921.css",
+    "main.js": "/New-Dodir/static/js/main.f62cc1cb.js",
+    "index.html": "/New-Dodir/index.html",
+    "main.1f550921.css.map": "/New-Dodir/static/css/main.1f550921.css.map",
+    "main.f62cc1cb.js.map": "/New-Dodir/static/js/main.f62cc1cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f550921.css",
+    "static/js/main.f62cc1cb.js"
+  ]
+}
