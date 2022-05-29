@@ -1,0 +1,32 @@
+.header{
+  max-height: 116px;
+  padding: 28px 15px;
+  border-bottom: 2px solid  rgba(0, 0, 0, 0.2);
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  
+  img{
+    width: 205px;
+    height: 46px;
+  }
+  img:hover{
+    cursor: pointer;
+      }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  li {
+    list-style-type: none;
+    margin-right: 15px;
+    font-size: 18px;
+  }
+  li:hover{
+    cursor: pointer;
+  }
+}

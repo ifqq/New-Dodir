@@ -1,0 +1,38 @@
+.wrapper{
+  background-color: #483b2b;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+  .social{
+    h3{
+      font-weight: 500;
+      font-size: 20px;
+      color: white;
+    }
+    ul {
+      display: flex;
+    }
+    li {
+      list-style-type: none;
+      width: 25px;
+      height: 25px;
+      margin-left: 25px;
+    }
+    li:hover{
+      opacity: 0.3;
+    }
+  }
+  button{
+    margin-top: 25px;
+    height: 60px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+}
