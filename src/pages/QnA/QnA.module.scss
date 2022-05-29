@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 40px;
+  }
+}
+
+.tabs{
+  width: 1000px;
+
+}
+
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 18px;
+  width: 100%;
+  overflow: hidden;
+}
+.tab:last-child{
+  margin-bottom: 60px;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  background: #6A6053;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.blue label {
+  background: #2980b9;
+}
+.tabContent {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+.tabContent p {
+  color: #212121;
+  background-color: #EFEFEF;
+  padding: 35px;
+  margin-bottom: 0;
+  line-height: 22px;
+}
+/* :active */
+.tab.active .tabContent {
+  max-height: 100vh;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  right: 0;
+  top: 0px;
+  display: block;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.tab.active label::after {
+  transform: rotate(180deg);
+}

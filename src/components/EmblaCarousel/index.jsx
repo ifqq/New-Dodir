@@ -58,7 +58,7 @@ export const EmblaCarousel = ({ worksmap }) => {
                   <img
                     className={styles.embla__slide__img}
                     src={obj.imgUrl}
-                    alt='Image'
+                    alt='Img'
                   />
                 </div>
               </div>
