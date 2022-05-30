@@ -7,11 +7,12 @@ import { Modal } from '../Modal';
 
 export const Layout = () => {
   const [activeModal, setActiveModal] = React.useState(false);
+  const [isContacts, setIsContacts] = React.useState(false);
   return (
     <>
       <EasyHeader setActiveModal={setActiveModal} />
-      <Header />
-      <Outlet />
+      <Header setIsContacts={setIsContacts} />
+      <Outlet context={{ setActiveModal, isContacts, setIsContacts }} />
       <Footer setActiveModal={setActiveModal} />
       {activeModal && <Modal setActiveModal={setActiveModal} />}
     </>

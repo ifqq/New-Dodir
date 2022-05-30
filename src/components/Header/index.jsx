@@ -3,9 +3,14 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 
-function Header() {
+function Header({ setIsContacts }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+
+  const handleClickContacts = () => {
+    setIsContacts(true);
+    navigate('/');
+  };
 
   return (
     <div className={styles.header}>
@@ -24,15 +29,27 @@ function Header() {
           >
             Услуги
           </li>
-          <li>Калькулятор</li>
+          <li
+            className={`${pathname === '/calculator' ? styles.selected : ''}`}
+            onClick={() => navigate('calculator')}
+          >
+            Калькулятор
+          </li>
           <li
             className={`${pathname === '/qna' ? styles.selected : ''}`}
             onClick={() => navigate('qna')}
           >
             Вопрос-ответ
           </li>
-          <li>Тип уборки</li>
-          <li>Контакты</li>
+          <li
+            className={`${
+              pathname === '/cleaning-type' ? styles.selected : ''
+            }`}
+            onClick={() => navigate('cleaning-type')}
+          >
+            Тип уборки
+          </li>
+          <li onClick={handleClickContacts}>Контакты</li>
         </ul>
       </div>
     </div>

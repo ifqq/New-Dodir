@@ -67,7 +67,7 @@ export const EmblaCarousel = ({ worksmap }) => {
             <>
               <div
                 className={styles.embla__slide}
-                style={{ backgroundImage: 'url(/jpg/room.jpg)' }}
+                style={{ backgroundImage: 'url(./jpg/room.jpg)' }}
               >
                 <div className={styles.bgColor}>
                   <div className={styles.benefitText}>
@@ -83,7 +83,7 @@ export const EmblaCarousel = ({ worksmap }) => {
               </div>
               <div
                 className={styles.embla__slide}
-                style={{ backgroundImage: 'url(/jpg/room.jpg)' }}
+                style={{ backgroundImage: 'url(./jpg/room.jpg)' }}
               >
                 <div className={styles.bgColor}>
                   <div className={styles.benefitText}>
@@ -97,7 +97,7 @@ export const EmblaCarousel = ({ worksmap }) => {
               </div>
               <div
                 className={styles.embla__slide}
-                style={{ backgroundImage: 'url(/jpg/room.jpg)' }}
+                style={{ backgroundImage: 'url(./jpg/room.jpg)' }}
               >
                 <div className={styles.bgColor}>
                   <div className={styles.benefitText}>

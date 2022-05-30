@@ -4,9 +4,11 @@ import { Layout } from './components/Layout/Layout';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Service from './pages/Service';
+import QnA from './pages/QnA';
+import CleaningType from './pages/CleaningType';
+import Calculator from './pages/Сalculator';
 
 import './App.scss';
-import QnA from './pages/QnA';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path='about-us' element={<AboutUs />} />
           <Route path='services' element={<Service />} />
           <Route path='qna' element={<QnA />} />
+          <Route path='cleaning-type' element={<CleaningType />} />
+          <Route path='calculator' element={<Calculator />} />
         </Route>
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>

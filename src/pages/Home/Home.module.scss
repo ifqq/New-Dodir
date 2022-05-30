@@ -30,6 +30,7 @@
       font-size: 35px;
     }
   }
+  
 
   .bgColor{
     background-color: rgba($color: #483a33, $alpha: 0.6);
@@ -82,6 +83,9 @@
       border: none;
       margin: auto 0;
       font-size: 20px;
+    }
+    button:hover{
+      cursor: pointer;
     }
   }
 
@@ -178,5 +182,5 @@
       }
     }
   }
-  
 }
+

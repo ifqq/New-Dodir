@@ -11,11 +11,11 @@ function EasyHeader({ setActiveModal }) {
         </div>
         <div className={styles.contacts}>
           <a href='tel:89292525677' className={styles.phone}>
-            <img src='/png/phone.png' alt='Phone' />
+            <img src='./png/phone.png' alt='Phone' />
             89292525677
           </a>
           <a href='mailto:kk.moidodyr@gmail.com' className={styles.email}>
-            <img src='/png/email.png' alt='Email' />
+            <img src='./png/email.png' alt='Email' />
             kk.moidodyr@gmail.com
           </a>
         </div>

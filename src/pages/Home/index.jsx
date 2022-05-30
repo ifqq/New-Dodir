@@ -1,4 +1,5 @@
 import React from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { EmblaCarousel } from '../../components/EmblaCarousel';
 import { PartnersCarousel } from '../../components/PartnersCarousel';
 import { YandexMap } from '../../components/YandexMap';
@@ -53,27 +54,27 @@ const uspartners = [
 
 const advantages = [
   {
-    url: '/png/leaf.png',
+    url: './png/leaf.png',
     text: 'Экологическая безопасность',
   },
   {
-    url: '/png/clock.png',
+    url: './png/clock.png',
     text: 'Экономия времени',
   },
   {
-    url: '/png/handshake.png',
+    url: './png/handshake.png',
     text: 'Индивидуальный подход',
   },
   {
-    url: '/png/muscles.png',
+    url: './png/muscles.png',
     text: 'Экономия сил',
   },
   {
-    url: '/png/star.png',
+    url: './png/star.png',
     text: 'Технологичность',
   },
   {
-    url: '/png/bank.png',
+    url: './png/bank.png',
     text: 'Экономия денег',
   },
 ];
@@ -83,6 +84,19 @@ function Home() {
     firstSelect: 'house',
     secondSelect: 'fast',
   });
+
+  const { setActiveModal, isContacts, setIsContacts } = useOutletContext();
+
+  React.useEffect(() => {
+    if (isContacts) {
+      window.scroll({
+        top: 5000,
+        behavior: 'smooth',
+      });
+      setIsContacts(false);
+    }
+  }, [isContacts]);
+
   const handleChangeSelect = (e) => {
     setSelectValues((prev) => ({
       ...prev,
@@ -98,7 +112,7 @@ function Home() {
     <div className={styles.main}>
       <div
         className={styles.bgImage}
-        style={{ backgroundImage: 'url(/jpg/girl.jpg)' }}
+        style={{ backgroundImage: 'url(./jpg/girl.jpg)' }}
       >
         <div className={styles.calc}>
           <select
@@ -128,7 +142,7 @@ function Home() {
           {advantages.map((obj) => (
             <div className={styles.advantage} key={obj.text}>
               <div className={styles.icon}>
-                <img src={obj.url} alt='Image' />
+                <img src={obj.url} alt='Img' />
               </div>
               <h3>{obj.text}</h3>
             </div>
@@ -137,7 +151,7 @@ function Home() {
       </div>
       <div
         className={styles.bgBenefitImage}
-        style={{ backgroundImage: 'url(/jpg/benefit.jpg)' }}
+        style={{ backgroundImage: 'url(./jpg/benefit.jpg)' }}
       >
         <div className={styles.bgColor}>
           <div className={styles.benefitText}>
@@ -177,7 +191,7 @@ function Home() {
       </div>
       <div className={styles.callBackInfo}>
         <h2>НУЖНО БОЛЬШЕ ИНФОРМАЦИИ?</h2>
-        <button>Заказать звонок</button>
+        <button onClick={() => setActiveModal(true)}>Заказать звонок</button>
       </div>
       <div className={styles.partnersWork}>
         <h2>С кем мы работаем</h2>
