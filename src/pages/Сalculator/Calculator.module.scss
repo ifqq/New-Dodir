@@ -1,131 +1,15 @@
-
-.wrapper {
-  background-color: #EEECE7;
-  color: #48423B;
+.btns {
   display: flex;
-  justify-content: space-between;
-  padding: 30px 40px;
-}
-
-.leftColumn{
-  margin-right: 100px;
-  
-  .h2{
-    margin: 0;
-    font-weight: 500;
-    font-size: 35px;
-    margin-bottom: 15px;
-  }
-  h3{
-    margin: 0;
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  select{
-    font-size: 20px;
-    padding: 15px 15px;
-    border: none;
-    outline: none;
-    width: 250px;
-    margin: 30px 10px;
-  }
-
-  .item{
-    margin-left: 20px;
-    margin-right: 100px;
-    border-bottom: 1px solid #6A6053;
-    display: flex;
-
-    .itemText{
-      width: 300px;
-      margin-right: 50px;
-      h2{
-        font-weight: 600;
-        font-size: 18px;
-  
-      }
-    }
-    .itemPrice{
-      width: 100px;
-      p{
-        font-weight: 400;
-        font-size: 16px;
-      }
-    }
-    
-  
-    .btn{
-      display: flex;
-      button{
-        border: none;
-        background: none;
-        font-size: 20px;
-        margin: 0 10px;
-      }
-      button:hover{
-        cursor: pointer;
-      }
-    }
-  }
-  .item:last-child{
-    border: none;
-  }
- 
-  
-}
-
-.rightColumn{
-  .pay{
-    text-align: center;
-    padding: 15px 50px;
-    background-color: white;
-    margin-bottom: 15px;
-  }
-  .input{
-    display: flex;
-    justify-content: space-between;
-    h3{
-      font-weight: 500;
-      margin-right: 25px;
-    }
-    input{
-      margin-top: 15px;
-      width: 70%;
-      height: 30px;
-      outline: none;
-      border: none;
-      border-radius: 5px;
-    }
-    input::placeholder{
-      padding: 0 10px;
-    }
-    textarea{
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      padding: 10px;
-      resize: none;
-      outline: none;
-      width: 68%;
-    }
-  }
-  .payBtn{
-    margin-top: 35px;
-    margin-bottom: 20px;
+  button{
     width: 100%;
-    border: 2px dashed #838383;
-    background-color: #6A6053;
-    color:white;
-    padding: 15px;
+    height: 50px;
+    border: none;
+    border-right: 1px solid #21212178;
+    background-color: white;
+    color: #212121;
+    font-size: 21px;
   }
-  .payBtn:hover{
+  button:hover{
     cursor: pointer;
   }
-  span{
-    
-    text-align: center;
-    font-size: 14px;
-  }
-  
 }

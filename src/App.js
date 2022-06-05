@@ -20,7 +20,7 @@ function App() {
           <Route path='services' element={<Service />} />
           <Route path='qna' element={<QnA />} />
           <Route path='cleaning-type' element={<CleaningType />} />
-          <Route path='calculator' element={<Calculator />} />
+          <Route path='calculator/:plc' element={<Calculator />} />
         </Route>
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>

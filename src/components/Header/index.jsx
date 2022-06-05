@@ -30,8 +30,10 @@ function Header({ setIsContacts }) {
             Услуги
           </li>
           <li
-            className={`${pathname === '/calculator' ? styles.selected : ''}`}
-            onClick={() => navigate('calculator')}
+            className={`${
+              pathname.includes('/calculator') ? styles.selected : ''
+            }`}
+            onClick={() => navigate('calculator/house')}
           >
             Калькулятор
           </li>

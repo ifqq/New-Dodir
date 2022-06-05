@@ -1,5 +1,5 @@
 import React from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 import { EmblaCarousel } from '../../components/EmblaCarousel';
 import { PartnersCarousel } from '../../components/PartnersCarousel';
 import { YandexMap } from '../../components/YandexMap';
@@ -85,6 +85,8 @@ function Home() {
     secondSelect: 'fast',
   });
 
+  const navigate = useNavigate();
+
   const { setActiveModal, isContacts, setIsContacts } = useOutletContext();
 
   React.useEffect(() => {
@@ -105,7 +107,9 @@ function Home() {
   };
 
   const onCalcBtn = () => {
-    console.log(selectValues);
+    navigate(
+      `calculator/${selectValues.firstSelect}?${selectValues.secondSelect}`
+    );
   };
 
   return (
@@ -120,8 +124,7 @@ function Home() {
             value={selectValues.firstSelect}
             onChange={handleChangeSelect}
           >
-            <option value='office'>Офис</option>
-            <option value='gymnasium'>Спортзал</option>
+            <option value='other'>Офис или Спортзал</option>
             <option value='house'>Квартира или дом</option>
           </select>
           <select
